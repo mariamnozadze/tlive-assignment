@@ -1,0 +1,607 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+/*----------- Header styles --------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header .left, .header .right {
+  display: flex;
+  align-items: center;
+}
+
+.header .left .menu-icon, .header .left .logo,
+.header .right .icon, .header .right .avatar-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.header .left .menu-icon img, .header .left .logo img,
+.header .right .icon img, .header .right .avatar-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --------Sidebar styles -------------*/
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  position: fixed;
+  height: 100%;
+  top: 50px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .menu {
+  padding: 10px;
+}
+
+.sidebar .menu a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar .menu a img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar .menu a .chevron {
+  margin-left: auto;
+  width: 15px;
+  height: 15px;
+}
+
+.sidebar .menu .submenu a {
+  padding-left: 40px;
+}
+
+.sidebar .menu .separator {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.sidebar .menu a.active,
+.sidebar .menu a:hover {
+  background-color: #eaeaea;
+}
+
+.sidebar-bottom-icons {
+  width: 110px;
+}
+.sidebar-bottom-icons {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    display: flex;
+    gap: 15px;
+}
+
+.sidebar-bottom-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+/* -------Content styles-------------- */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  padding-top: 70px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.breadcrumb img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.breadcrumb span {
+  font-size: 14px;
+}
+
+/* -----------Category styles -----------*/
+.category-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.category-header h1 {
+  margin: 0;
+}
+
+.search-bar {
+  margin-top: 20px;
+  width: 560px;
+  padding: 12px 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  background-color: #f7f8fa;
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9fafb;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category-card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.849)
+}
+
+.category-card h3 {
+  margin: 0 0 10px;
+}
+
+.category-card p {
+  margin: 0 0 20px;
+}
+
+.category-card .status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-card .status .members img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: -10px;
+  border: 2px solid #fff;
+}
+
+.category-card .status .label {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.category-card .status .label.ongoing {
+  background-color: #d3f9d8;
+  color: #34a853;
+}
+
+.category-card .status .label.finished {
+  background-color: #fce8e6;
+  color: #ea4335;
+}
+
+.add-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #eaeaea;
+  border-radius: 5px;
+  color: #999;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.add-card .add-icon {
+  font-size: 40px;
+}
+
+/*----------- Button styles --------*/
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .ongoing-btn {
+  width: 126px;
+  height: 41px;
+  padding: 2px 20px;
+  gap: 4px;
+  border-radius: 6px 0 0 0;
+  background-color: #EDEBFE;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid transparent;
+}
+
+.dropdown .dropdown-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .ongoing-btn {
+  background-color: #ddd;
+}
+
+.export-btn, .add-user-btn {
+  width: 128px;
+  height: 41px;
+  padding: 10px 20px;
+  gap: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.export-btn {
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+
+.add-user-btn {
+  background-color: #1C64F2;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.button-icon {
+  margin-right: 8px;
+}
+
+/* -------------Overlay and Popup------- */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 646px;
+  height: 478px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  z-index: 3000;
+  padding: 20px;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popup-header .left {
+  flex: 1;
+}
+
+.popup-line {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.popup-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.popup-col {
+  flex: 1 1 50%;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.popup-row label,
+.popup-col label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#status,
+.popup-row input,
+.popup-col input,
+.popup-row textarea,
+.popup-col textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+  outline: none;
+  opacity: 1;
+}
+
+textarea {
+  padding: 13px 20px;
+  resize: vertical;
+}
+
+.popup-members {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup-members .member {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.popup-buttons button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.popup-buttons .save-btn {
+  background-color: #1C64F2;
+  color: white;
+}
+
+/*---- Members Page styles ----------*/
+#members-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#members-page table th,
+#members-page table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#members-page table th {
+  background-color: #f4f4f4;
+}
+
+.profile-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#members-page table thead tr:nth-child(2) th {
+  background-color: white;
+  padding: 5px;
+}
+
+#members-page table thead input,
+#members-page table thead select {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+
+.profile-row {
+ display: flex;
+ flex-direction: row;
+}
+
+#members-page table th {
+  background-color: #f4f4f4;
+}
+
+#members-page .status-active {
+  color: green;
+}
+
+#members-page .status-offline {
+  color: red;
+}
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.status-dot.active {
+  background-color: green;
+}
+
+.status-dot.offline {
+  background-color: red;
+}
+
+#members-page .pagination {
+  display: flex;
+  justify-content: right
+}
+
+#members-page .pagination button {
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+
+#members-page .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+.hidden {
+  display: none;
+}
+
+/*-----add member popup-------*/
+#add-member-popup {
+  width: 646px;
+  height: 580px;
+}
+
+.avatar-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.member-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.update-btn {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-line.dotted {
+  border-top: 1px dotted #ccc;
+}
+
+
+/*------notification-------**/
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+}
+
+#delete-notification {
+  background-color: red;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.edit-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.category-card {
+  position: relative;
+}
+
+.delete-user-btn {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-right: auto; 
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

@@ -1,0 +1,72 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "title": "Tennis Players",
+        "description": "This category includes users who are passionate about playing tennis, whether at an amateur or professional level.",
+        "status": "ONGOING",
+        "members": [
+          { "name": "Member 1", "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" },
+          { "name": "Member 2", "avatar": "https://imgv3.fotor.com/images/ai-headshot-generator/AI-generated-headshot-of-a-female-in-dark-grey-attire-standing-her-back-to-a-builing-view-window-by-Fotor-AI-LinkedIn-photo-generator.jpg" },
+          { "name": "Member 3", "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=pexels-pixabay-415829.jpg&fm=jpg" },
+          { "name": "Member 3", "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=pexels-pixabay-415829.jpg&fm=jpg" },
+          { "name": "Member 3", "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=pexels-pixabay-415829.jpg&fm=jpg" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Football Fans",
+        "description": "This category includes users who are avid fans of football, following local and international leagues and tournaments.",
+        "status": "ONGOING",
+        "members": [
+            { "name": "Member 1", "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" },
+            { "name": "Member 2", "avatar": "https://imgv3.fotor.com/images/ai-headshot-generator/AI-generated-headshot-of-a-female-in-dark-grey-attire-standing-her-back-to-a-builing-view-window-by-Fotor-AI-LinkedIn-photo-generator.jpg" }
+          ]
+      },
+      {
+        "id": 3,
+        "title": "Basketball Enthusiasts",
+        "description": "This category includes users who enjoy playing and watching basketball, participating in local games and following major leagues.",
+        "status": "ONGOING",
+        "members": [
+            { "name": "Member 1", "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" },
+            { "name": "Member 2", "avatar": "https://imgv3.fotor.com/images/ai-headshot-generator/AI-generated-headshot-of-a-female-in-dark-grey-attire-standing-her-back-to-a-builing-view-window-by-Fotor-AI-LinkedIn-photo-generator.jpg" },
+            { "name": "Member 3", "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=pexels-pixabay-415829.jpg&fm=jpg" }
+          ]
+      },
+      {
+        "id": 4,
+        "title": "Change charts javascript",
+        "description": "In _variables.scss on line 672 you define $table-variants. Each instance of 'color-level' needs to be changed to 'shift-color'.",
+        "status": "FINISHED",
+        "members": [
+            { "name": "Member 1", "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" },
+            { "name": "Member 2", "avatar": "https://imgv3.fotor.com/images/ai-headshot-generator/AI-generated-headshot-of-a-female-in-dark-grey-attire-standing-her-back-to-a-builing-view-window-by-Fotor-AI-LinkedIn-photo-generator.jpg" },
+            { "name": "Member 3", "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=pexels-pixabay-415829.jpg&fm=jpg" }
+          ]
+      },
+      {
+        "id": 5,
+        "title": "Music Lovers",
+        "description": "This category includes users who have a keen interest in music, attending concerts and staying updated with the latest releases across various genres.",
+        "status": "FINISHED",
+        "members": [
+            { "name": "Member 1", "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" },
+            { "name": "Member 2", "avatar": "https://imgv3.fotor.com/images/ai-headshot-generator/AI-generated-headshot-of-a-female-in-dark-grey-attire-standing-her-back-to-a-builing-view-window-by-Fotor-AI-LinkedIn-photo-generator.jpg" },
+            { "name": "Member 3", "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=pexels-pixabay-415829.jpg&fm=jpg" }
+          ]
+      },
+      {
+        "id": 6,
+        "title": "Runners",
+        "description": "This category includes users who regularly participate in running activities, including marathons and daily jogging routines.",
+        "status": "FINISHED",
+        "members": [
+            { "name": "Member 1", "avatar": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" },
+            { "name": "Member 2", "avatar": "https://imgv3.fotor.com/images/ai-headshot-generator/AI-generated-headshot-of-a-female-in-dark-grey-attire-standing-her-back-to-a-builing-view-window-by-Fotor-AI-LinkedIn-photo-generator.jpg" },
+            { "name": "Member 3", "avatar": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?cs=srgb&dl=pexels-pixabay-415829.jpg&fm=jpg" }
+          ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>task</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="header">
+      <div class="left">
+        <div class="menu-icon">
+          <img src="./images/Vector.png" />
+        </div>
+        <div class="logo">
+          <img src="./images/Logo.png" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="icon">
+          <img src="./images/Notification Icon.png" />
+        </div>
+        <div class="icon">
+          <img src="./images/view-grid.png" />
+        </div>
+        <div class="avatar-icon"><img src="./images/Frame 11.png" /></div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="menu">
+        <a href="#"><img src="./images/chart-pie.png" /> Overview</a>
+        <a href="#"><img src="./images/document-report.png" /> Pages<img class="chevron"
+            src="./images/chevron-down.png" /></a>
+        <a href="#" class="active"><img src="./images/shopping-bag.png" /> Category<img class="chevron"
+            src="./images/chevron-down.png" /></a>
+        <div class="submenu hidden">
+          <a href="#" class="submenu-item" data-page="members">Members</a>
+          <a href="#" class="submenu-item" data-page="admins">Admins</a>
+        </div>
+        <hr class="separator" />
+        <a href="#"><img src="./images/clipboard-list.png" /> Docs</a>
+        <a href="#"><img src="./images/collection.png" /> Components</a>
+        <a href="#"><img src="./images/support.png" /> Help</a>
+      </div>
+      <div class="sidebar-bottom-icons">
+        <a href="#"><img src="./images/adjustments.png" alt="Settings" /></a>
+        <a href="#"><img src="./images/cog.png" alt="Help" /></a>
+        <a href="#"><img src="./images/globe.png" alt="Logout" /></a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="breadcrumb">
+        <img src="./images/home.png" alt="Home Icon" />
+        <span id="breadcrumb-text">Home > Category</span>
+      </div>
+
+      <!-- Category Header  -->
+      <div class="category-header" id="category-header">
+        <h1 id="category-title">Category</h1>
+        <div class="search-bar-container">
+          <div class="search-bar category-search">
+            <input type="text" placeholder="Search" />
+          </div>
+          
+
+          <div class="category-grid" id="category-grid">
+            <!-- Category cards will be here -->
+            <div class="category-card add-card">
+              <div class="add-icon">+</div>
+            </div>
+          </div>
+
+          <div class="button-group hidden">
+            <div class="dropdown">
+              <button class="ongoing-btn">ONGOING <img src="./images/chevron-down.png" class="dropdown-icon"></button>
+              <div class="dropdown-content">
+                <a href="#">Finished</a>
+              </div>
+            </div>
+            <button class="export-btn"><img src="./images/document-download.png" class="button-icon">Export</button>
+            <button class="add-user-btn">
+              <span>+</span>
+              Add user
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="members-page" class="hidden">
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="select-all" /></th>
+              <th>Name</th>
+              <th>ID</th>
+              <th>Birth Date</th>
+              <th>Status</th>
+              <th><img src="./images/trash-02.png" alt="Delete Selected" class="delete-selected-icon" /></th>
+            </tr>
+            <tr>
+              <th></th>
+              <th><input type="text" id="filter-name" placeholder="Search" /></th>
+              <th><input type="text" id="filter-id" placeholder="Search" /></th>
+              <th><input type="text" id="filter-birthdate" placeholder="Search" /></th>
+              <th>
+                <select id="filter-status">
+                  <option value="">All</option>
+                  <option value="active">Active</option>
+                  <option value="offline">Offline</option>
+                </select>
+              </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="players-list">
+            <!-- list will be inserted -->
+          </tbody>
+        </table>
+        
+        <div class="pagination-info">
+          <span id="pagination-details"></span>
+          <div class="pagination">
+            <button class="prev-btn">&lt; Previous</button>
+            <button class="next-btn">Next &gt;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!---OVERLAY-->
+    <div class="popup" id="add-category">
+      <div class="popup-content">
+        <div class="popup-header">
+          <div class="left">
+            <h2>Add New Category</h2>
+          </div>
+        </div>
+        <hr class="popup-line" />
+        <div class="popup-row">
+          <div class="popup-col">
+            <label for="category-name">Category Name:</label>
+            <input type="text" id="category-name" name="category-name" style="width: 200px" />
+          </div>
+          <div class="popup-col">
+            <label for="status">Status:</label>
+            <select id="status" name="status" style="width: 200px">
+              <option value="ONGOING">Ongoing</option>
+              <option value="FINISHED">Finished</option>
+            </select>
+          </div>
+          
+        </div>
+        <div class="popup-row">
+          <div class="popup-col">
+            <label for="members">Members:</label>
+            <div class="popup-members">
+              <div class="member">Member 1</div>
+              <div class="member">Member 2</div>
+              <div class="member">Member 3</div>
+              <div class="member">Member 4</div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-row">
+          <div class="popup-col">
+            <label for="short-description">Short Description:</label>
+            <textarea id="short-description" name="short-description"></textarea>
+          </div>
+        </div>
+        <hr class="popup-line" />
+        <div class="popup-buttons">
+          <button class="cancel-btn">Cancel</button>
+          <button class="save-btn">Save</button>
+          <button class="delete-btn" style="display:none;color:white;background-color:red;">Delete Category</button>
+        </div>
+      </div>
+    </div>
+
+<!---add member overlay-->
+<div class="overlay" id="add-member-overlay"></div>
+<div class="popup" id="add-member-popup">
+  <div class="popup-content">
+    <h2>Add New Member</h2>
+    <hr class="popup-line" />
+    <div class="avatar-section">
+      <img id="avatar-preview" src="./images/Frame 11.png" alt="Avatar" class="member-avatar" />
+      <input type="file" id="avatar-upload" accept="image/*" style="display: none;" />
+      <button class="update-btn">Update</button>
+    </div>
+    
+    <hr class="popup-line dotted" />
+    <div class="popup-row">
+      <div class="popup-col">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" />
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <option value="active">Active</option>
+          <option value="offline">Offline</option>
+        </select>
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" />
+      </div>
+      <div class="popup-col">
+        <label for="mail">Mail:</label>
+        <input type="email" id="mail" name="mail" />
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" />
+        <label for="birth-date">Birth Date:</label>
+        <input type="date" id="birth-date" name="birth-date" />
+      </div>
+    </div>
+    <hr class="popup-line" />
+    <div class="popup-buttons">
+      <button class="cancel-btn">Cancel</button>
+      <button class="save-btn">Save</button>
+    </div>
+  </div>
+</div>
+
+
+     <!-- Notification box -->
+     <div id="notification" class="notification">Category added!</div>
+     <div id="delete-notification" class="notification" style="background-color: red;">Category deleted!</div>
+     
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
